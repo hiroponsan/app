@@ -1,0 +1,48 @@
+<header>
+ <div class = "C-Camp"><a href ="/">C-Campas</a>
+   <div class = "to_detail clearfix">
+   <a href = "<%= @product.url %>">授業詳細を見る</a>
+   </div>
+   <div class = "write_review">
+   <a style = "float:right" href = "/entry/<%= @product.id %>">授業評価を書く</a>
+   </div>
+ </div>
+</header>
+
+
+<div class = "main clearfix">
+  <dt>
+    <div class = "title"><dl><h3>授業名 : <%= @product.title %></dl></h3>
+    </div>
+    <div class = "professer"><dl><h3>担当教員 : <%= @product.professer %></dl></h3>
+    </div>
+  </dt>
+  <div class = "rate clearfix">
+    <div class = "easy"><strong>平均楽単度 : <%= @easy %>/5</strong>
+    </div>
+    <div class = "fun clearfix"><strong>平均面白さ : <%= @fun %>/5</strong>
+    </div>
+  </div>
+  <div class = "info clearfix">
+    <div class  = "report">レポートの有無 : <%= @report %>
+    </div>
+    <div class = "attendence">出欠の有無 : <%= @atd %>
+    </div>
+    <div class = "test">テストの有無 : <%= @test %>
+    </div>
+  </div>
+  <div class = "review_all">評価一覧
+  <% if @reviews.length == 12 %>
+    <div class = "each_review">
+    <p><%= @reviews %></p>
+    </div>
+  <% else %>
+    <% @reviews.each do |review| %>
+      <div class = "each_review">
+        <%= review.review %></br>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+

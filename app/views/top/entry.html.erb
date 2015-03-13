@@ -1,0 +1,58 @@
+<header>
+  <div class ="top"><a href ="/">C-Campas</a>
+  </div>
+</header>
+
+<div class ="main1 clearfix">
+  <div class ="title1">
+    <h3>科目名 : <%= @product.title %></h3>
+  </div>
+  <div class ="professer">
+    <h3>担当教員 : <%= @product.professer %></h3>
+  </div>
+<!-- <form action="entry/<%= @product_id %>" method="post"> -->
+  <%= form_tag("/entry/#{@product.id}", :method => :post) do %>
+    <div class = "info clearfix">
+
+<!--       <div class ="info clearfix"> -->
+        <label class = "easy_1" style="margin-right: 8px">
+          <strong>楽単度</strong>
+        </label>
+
+        <input class="search__query1" name="easy" placeholder="楽単度" style="text-align: right" type="number" max="5" min="1" value="1"> (5段階評価でお選びください)
+
+
+      <label class="right_search"style="margin-right: 8px">
+        <strong>面白さ</strong>
+      </label>
+
+
+      <input class="search__query2 " name="fun" placeholder="面白さ" style="text-align: right" type="number" max="5" min="1" value="1"> (5段階評価でお選びください)
+
+
+    </div>
+
+    <div class ="detail">
+      <div class ="report">レポートの有無
+        <input type="radio" name="report" value="1">有
+        <input type="radio" name="report" value="0">無
+      </div>
+      <div class = "attendence clearfix">出欠の有無
+        <input type="radio" name="attendence" value="1">有
+        <input type="radio" name="attendence" value="0">無
+      </div>
+      <div class = "test">テストの有無
+        <input type="radio" name="test" value="1">有
+        <input type="radio" name="test" value="0">無 
+      </div>
+    </div>
+    <input type="hidden" name="product_id" value="<%= @product.id %>">
+    <textarea class="textbox1" placeholder="ここからお書きください" name="review"></textarea>
+    <input class = "send"type="submit" value="送信する">
+<!-- </form> -->
+  <% end %>
+</div>
+
+
+  <footer>
+  </footer>
