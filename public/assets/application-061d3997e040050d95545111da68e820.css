@@ -1,0 +1,520 @@
+/* line 1, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.top {
+  height: 60px;
+  background-color: blue;
+  font-size: 20px;
+}
+
+/* line 7, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.main1 {
+  margin: 50px 0 0 50px;
+}
+
+/* line 11, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 17, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.title1 {
+  font-size: 25px;
+  margin: 0;
+  height: 30px;
+}
+
+/* line 23, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.professer {
+  font-size: 25px;
+}
+
+/* line 27, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.search__query1 {
+  width: 30px;
+  font-size: 20px;
+}
+
+/* line 32, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.search__query2 {
+  width: 30px;
+  font-size: 20px;
+}
+
+/* line 37, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 43, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.easy {
+  font-size: 18px;
+}
+
+/* line 48, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.right_search {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+/* line 53, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 59, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.review {
+  line-height: 50px;
+  height: 80%;
+}
+
+/* line 64, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 70, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.report {
+  width: 20%;
+  text-align: left;
+  padding: 0 auto;
+  height: 20px;
+}
+
+/* line 77, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.attendence {
+  text-align: center;
+}
+
+/* line 81, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.test {
+  width: 50px;
+  text-align: center;
+}
+
+/* line 86, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.submit {
+  width: 70px;
+  float: left;
+  height: 40px;
+  font-size: 20px;
+}
+
+/* line 93, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.textbox1 {
+  width: 80%;
+  padding: 0 100px 0 0;
+  height: 300px;
+  font-size: 20px;
+}
+
+/* line 100, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.send {
+  width: 96%;
+  height: 40px;
+  font-size: 25px;
+  background-color: blue;
+}
+
+/* line 107, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+h5 {
+  font-size: 28px;
+}
+
+/* line 111, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.left {
+  text-align: 2px;
+  color: pink;
+}
+
+/* line 116, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/entry.scss */
+.left {
+  margin: 0;
+}
+/* line 1, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+body {
+  margin: 0;
+}
+
+/* line 4, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.top {
+  height: 70px;
+  background-color: blue;
+  font-size: 50px;
+  color: orange;
+  text-align: left;
+  padding: 10px 20px 10px 10px;
+}
+
+/* line 13, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.search {
+  height: 100px;
+  float: right;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* line 20, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.search__query {
+  width: 200px;
+  height: 25px;
+  font-size: 20px;
+  float: left;
+  line-height: 23px;
+}
+
+/* line 28, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.form {
+  width: 100px;
+  height: 0;
+  float: right;
+}
+
+/* line 34, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.search {
+  margin: 30px 150px 30px 0;
+}
+
+/* line 38, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.btn-search {
+  width: 60px;
+  height: 30px;
+  float: left;
+  margin-left: 8px;
+  font-size: 20px;
+}
+
+/* line 46, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.google {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  padding: 10px 10px;
+}
+
+/* line 53, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.main {
+  /*height: 950px;*/
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 59, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 65, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.left {
+  height: 100%;
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+/* line 72, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.middle {
+  height: 100%;
+  width: 33%;
+  float: left;
+  text-align: center;
+  right: 5px;
+}
+
+/* line 80, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.right {
+  height: 100%;
+  width: 33%;
+  float: right;
+  text-align: center;
+}
+
+/* line 87, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 93, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.main_3 {
+  font-size: 30px;
+  width: 90%;
+  margin: 0 500px 0 0;
+}
+
+/* line 99, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.left {
+  width: 90%;
+}
+
+/* line 103, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.main {
+  margin: 0;
+}
+
+/* line 107, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.ebtry bottun {
+  color: pink;
+}
+
+/* line 112, /Users/Owner/class_review/app/assets/stylesheets/index.scss */
+.to_detail a {
+  color: yellow;
+}
+/* line 5, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+body {
+  margin: 0;
+}
+
+/* line 9, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.C-Camp {
+  height: 60px;
+  background-color: blue;
+  font-size: 50px;
+  color: white;
+  text-align: left;
+  padding: 10px 20px 10px 10px;
+}
+
+/* line 18, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 24, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.to_detail {
+  font-size: 30px;
+  float: right;
+}
+
+/* line 29, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.write_review {
+  font-size: 30px;
+  float: right;
+}
+
+/* line 34, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 39, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 45, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.title {
+  font-size: 25px;
+  padding: 0 0 10 0;
+}
+
+/* line 50, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.professer {
+  font-size: 25px;
+  padding: 0 0 10 0;
+  text-height: 8px;
+}
+
+/* line 56, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.rate {
+  height: 40px;
+}
+
+/* line 60, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 66, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.easy {
+  font-size: 20px;
+  float: left;
+  width: 50%;
+}
+
+/* line 72, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.fun {
+  font-size: 20px;
+  float: left;
+}
+
+/* line 76, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 82, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.info {
+  height: 30px;
+}
+
+/* line 86, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.report {
+  width: 33%;
+  float: left;
+  font-size: 20px;
+  text-height: 6px;
+  height: 30px;
+}
+
+/* line 95, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.attendence {
+  float: left;
+  text-align: left;
+  width: 33%;
+  font-size: 20px;
+  text-height: 6px;
+}
+
+/* line 103, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.test {
+  float: left;
+  width: 33%;
+  text-align: left;
+  font-size: 20px;
+  text-height: 17px;
+}
+
+/* line 111, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.review_ {
+  font-size: 20px;
+  margin: 25px;
+}
+
+/* line 115, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.review_all {
+  color: purple;
+  font-size: 25px;
+  margin: 20px;
+}
+
+/* line 120, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.each_review {
+  font-size: 30px;
+  border-bottom: 1.3px dashed #aaa;
+}
+
+/* line 125, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.info {
+  height: 40px;
+}
+
+/* line 129, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.easy_1 {
+  font-size: 20px;
+}
+
+/* line 133, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.send {
+  width: 87.5%;
+}
+
+/* line 137, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/products.scss */
+.main_3 {
+  backgrounf-color: #F5F5F5;
+}
+/* line 1, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/search.scss */
+.top {
+  height: 60px;
+  background-color: blue;
+  font-size: 20px;
+}
+
+/* line 7, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/search.scss */
+.list {
+  height: 60%;
+  text-align: left;
+  font-size: 20px;
+  margin: 60px 60px 100px 100px;
+  margin: 0;
+}
+
+/* line 15, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/search.scss */
+.kaminari {
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+  margin: 100px 20px 0 0;
+}
+
+/* line 22, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/search.scss */
+ul {
+  color: #00CED1;
+}
+
+/* line 26, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/search.scss */
+h2 {
+  font-size: 50px;
+}
+/* line 3, /Users/Owner/class_review/app/assets/stylesheets/show.scss */
+.each_review {
+  font-size: 20px;
+  color: black;
+}
+
+/* line 8, /Users/Owner/class_review/app/assets/stylesheets/show.scss */
+.write_review a {
+  color: orange;
+}
+
+/* line 12, /Users/Owner/class_review/app/assets/stylesheets/show.scss */
+.main_3 {
+  margin: 0 auto;
+}
+/* line 5, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/top.scss */
+.detail1 {
+  color: red;
+}
+
+/* line 9, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/top.scss */
+.abcd {
+  color: orange;
+}
+
+/* line 13, /Users/hiropon/Desktop/class_review/app/assets/stylesheets/top.scss */
+.left {
+  margin: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+.top {
+  height: 70px;
+  background-color: blue;
+  font-size: 50px;
+  color: orange;
+  text-align: left;
+  padding:10px 20px 10px 10px;
+}
