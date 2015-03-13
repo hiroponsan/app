@@ -47,7 +47,7 @@ end
 gem 'mechanize'
 gem 'pry-rails'
 gem 'compass-rails'
-gem 'sprockets', '2.11.0'
+# gem 'sprockets', '2.11.0'
 gem 'kaminari'
 gem 'will_paginate'
 
