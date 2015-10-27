@@ -14,8 +14,8 @@
  *= require_self
  */
 header {
-  height: 80px;
-  background-color:navy;
+  height: 130px;
+  background-color:green;
   color:white;
 }
 
@@ -35,7 +35,7 @@ header a {
 }
 
 header h4 {
-  color:orange;
+  color:green;
 }
 
 body {
@@ -47,7 +47,7 @@ body {
 }
 
 .main {
-  width:90%;
+  width:85%;
   background-color: white;
   text-align: center;
   margin:0 auto;
@@ -302,4 +302,12 @@ th {
 
 ul {
   font-size: 40px;
+}
+
+header.top.clearfix {
+  border-color: green;
+}
+
+.title {
+  color: orange;
 }
