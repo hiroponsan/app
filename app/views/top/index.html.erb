@@ -13,7 +13,9 @@
       <h2><img src ="http://hukumusume.com/douwa/new/gazou/PRIZ026.JPG" height="70px"> 注目授業ランキング <img src ="http://hukumusume.com/douwa/new/gazou/PRIZ026.JPG" height="70px"></h2>
       <% @ranking.each.with_index(1) do |product, i| %>
         <ul>
-          <a href= "/products/<%= product.id %>"><p><%= i %>位<%= product.title %></a></p>
+        <div class ="box">
+          <a href= "/products/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位<%= product.title %></p></a></div>
+          </div>
         </ul>
       <% end %>
     </div>
