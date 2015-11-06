@@ -20,6 +20,7 @@ class TopController < ApplicationController
 
   def search
     @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
+    @products = @products.where('professer LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
   end
 
 private
@@ -32,7 +33,7 @@ private
   end
 
   def create_params
-    params.permit(:report, :attendence, :test, :revi/Users/hiropon/Desktop/class_review/app/controllers/top_controller.rbew, :easy, :fun, :product_id)
+    params.permit(:report, :attendence, :test, :review, :easy, :fun, :product_id)
   end
 
 end

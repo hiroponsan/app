@@ -5,6 +5,7 @@
 
 <div class ="main">
 <div class = "list">
+<h3>"<%= params[:keyword] %>"の検索結果</h3>
 <% @products.each do |product| %>
   <ul>
     <li><h3><a href= "/products/<%= product.id %>"><span><%= product.title %></h3></li></span>

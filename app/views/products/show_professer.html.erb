@@ -1,0 +1,20 @@
+<header class = "top clearfix">
+   C-Campas
+  <div class = "search">
+    <%= form_tag("/search", method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="授業名で検索" type="text" value="<%= @products.professer %>">
+    <button class="btn-search" title="検索" type="submit"><i class="icon-search">検索</i></button>
+    <% end %>
+  </div>
+</header>
+
+    <% @products.each do |product| %>
+  <ul>
+    <li><h3><a href= "/products/<%= product.id %>"><span><%= product.title %></h3></li></span>
+  </ul>
+  <% end %>
+  </div>
+  <div class ="kaminari">
+   <%= paginate @products %>
+  </div>
+</div>

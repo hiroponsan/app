@@ -1,3 +1,9 @@
+
+<style>
+  .review_all {margin:0 0 0 0;}
+  .review_all {color: black;}
+</style>
+
 <header>
  <div class = "C-Camp"><a href ="/">C-Campas</a>
    <div class = "to_detail clearfix">
@@ -7,42 +13,74 @@
    <a style = "float:right" href = "/entry/<%= @product.id %>">授業評価を書く</a>
    </div>
  </div>
+ <a href ="/">ランキングに戻る</a></div>
 </header>
+
 
 
 <div class = "main">
   <dt>
+  <% if @reviews.blank? %>
+  <div class ="a">まだレビューがありません
+
+  <a href ="/entry/<%= @product.id %>">新たにれびゅーを書く</a>
+
+  </div>
+  <% else %>
+   <% @reviews.each do |review| %>
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
     </div>
-    <div class = "professer"><dl><h3>担当教員 : <%= @product.professer %></dl></h3>
+    <div class = "professer"><dl><a href ="/list"><h3>担当教員 : <%= @product.professer %></dl></h3></a>
     </div>
   </dt>
   <div class = "rate clearfix">
-    <div class = "easy"><strong>平均楽単度 : <%= @easy %>/5</strong>
+    <div class = "easy"><strong>楽単度 : <%= review.easy %>/5</strong><div id="star"></div>
     </div>
-    <div class = "fun clearfix"><strong>平均面白さ : <%= @fun %>/5</strong>
+    <div class = "fun clearfix"><strong>面白さ : <%= review.fun %>/5</strong>
     </div>
   </div>
   <div class = "info clearfix">
-    <div class  = "report">レポートの有無 : <%= @report %>
+    <div class  = "report">レポート : <%= @report %>
     </div>
-    <div class = "attendence">出欠の有無 : <%= @atd %>
+    <div class = "attendence">出欠 : <%= @atd %>
     </div>
-    <div class = "test">テストの有無 : <%= @test %>
+    <div class = "test">テスト : <%= @test %>
     </div>
   </div>
-  <div class = "review_all">評価一覧
+  <div class = "review_all" style>
   <% if @reviews.length == 12 %>
     <div class = "each_review">
     <p><%= @reviews %></p>
     </div>
   <% else %>
-    <% @reviews.each do |review| %>
       <div class = "each_review">
         <%= review.review %></br>
       </div>
     <% end %>
+    <% end %>
+
   <% end %>
   </div>
 </div>
+
+<% else %>
+
+
+</body>
+
+
+</html>
+
+<script>
+$('#star').raty({
+  size     : 36,
+  starOff: '/assets/star-off.png',
+  starOn : '/assets/star-on.png',
+  scoreName: 'review[point]' 
+});
+</script>
+
+<script src ="app/assets/javascript/jquery.raty.js">
+
+<script>
 
