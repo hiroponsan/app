@@ -20,7 +20,6 @@ class TopController < ApplicationController
 
   def search
     @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
-    @products = @products.where('professer LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
   end
 
 private
