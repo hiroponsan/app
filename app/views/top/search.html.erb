@@ -8,7 +8,7 @@
 <h3>"<%= params[:keyword] %>"の検索結果</h3>
 <% @products.each do |product| %>
   <ul>
-    <li><h3><a href= "/products/<%= product.id %>"><span><%= product.title %> 教員: <%= product.professer %></h3></li></span>
+    <li><h3><a href= "/products/<%= product.id %>"><span><%= product.title %> </h3> <h5><%= product.professer %></h5>先生</li></span>
   </ul>
   <% end %>
   </div>
