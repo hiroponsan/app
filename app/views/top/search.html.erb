@@ -3,12 +3,19 @@
   </div>
 </header>
 
+<style>
+  
+strong {font-size: 20px;}
+strong {margin-left: 10px;}
+
+</style>
+
 <div class ="main">
 <div class = "list">
 <h3>"<%= params[:keyword] %>"の検索結果</h3>
 <% @products.each do |product| %>
   <ul>
-    <li><h3><a href= "/products/<%= product.id %>"><span><%= product.title %> </h3> <h5><%= product.professer %></h5>先生</li></span>
+    <li><h3><a href= "/products/<%= product.id %>"><span><%= product.title %>  <strong><%= product.professer %>先生</strong></li></span>
   </ul>
   <% end %>
   </div>
