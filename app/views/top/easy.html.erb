@@ -8,6 +8,7 @@
   </div>
 </header>
 
+
   <div class = "main_3 clearfix">
     <div class = "left">
     <h2><img src ="http://hukumusume.com/douwa/new/gazou/PRIZ026.JPG" height="70px"> <a href ="/fun"> 面白授業ランキング <img src ="http://hukumusume.com/douwa/new/gazou/PRIZ026.JPG" height="70px"></h2>
@@ -16,11 +17,10 @@
       <% @ranking.each.with_index(1) do |product, i| %>
         <ul>
         <div class ="box">
-          <a href= "/products/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位<%= product.title %><%= @input_easy %></p></a></div>
+          <a href= "/products/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位<%= product.easy %></p></a></div>
           </div>
         </ul>
-         <% end %>
+      <% end %>
     </div>
     <footer>
     </footer>
-

@@ -16,11 +16,10 @@
       <% @ranking.each.with_index(1) do |product, i| %>
         <ul>
         <div class ="box">
-          <a href= "/products/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位<%= product.title %><%= @input_easy %></p></a></div>
+          <a href= "/products/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位<%= product.fun %></p></a></div>
           </div>
         </ul>
-         <% end %>
+      <% end %>
     </div>
     <footer>
     </footer>
-

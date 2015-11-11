@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/entry/:id' => 'top#entry'
   get '/search' => 'top#search'
   get '/list' => 'products#show_professer'
+  get '/easy' => 'top#easy'
+  get '/fun' => 'top#fun'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,14 +5,30 @@ class TopController < ApplicationController
     @ranking = product_ids.map { |id| Product.find(id)}
   end
 
+  def easy
+    @ranking = Review.all.order('easy DESC').limit(20)
+  end
+
+  def fun 
+    @ranking = Review.all.order('fun DESC').limit(20)
+  end
+
   def link
     @product = Product.find(params[:id])
   end
 
-  def post
-    Review.create(create_params)
-    redirect_to action: "index"
+  def error
   end
+
+
+  def post
+   @review = Review.create(create_params)
+   if @review.save
+   redirect_to action: "index", notice: ''
+ else
+  render :error
+  end
+end
 
   def entry
     @product = Product.find(entry_params[:id])

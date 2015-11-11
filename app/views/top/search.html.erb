@@ -1,5 +1,10 @@
-<header　class="fixed">
-
+<header class = "top clearfix">
+   C-Campas
+  <div class = "search">
+    <%= form_tag("/search", method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="授業名で検索" type="text" value="">
+    <button class="btn-search" title="検索" type="submit"><i class="icon-search">検索</i></button>
+    <% end %>
   </div>
 </header>
 
@@ -8,6 +13,12 @@
 strong {font-size: 18px;}
 
 </style>
+ <a href ="/">ランキングに戻る</a></div>
+ <a href ="/">他のキーワードで検索する</a>
+
+<% if @products.blank? %>
+<h3>"<%= params[:keyword] %>"の検索結果はありません</h3>
+<% else %> 
 
 <div class ="main">
 <div class = "list">
@@ -22,3 +33,5 @@ strong {font-size: 18px;}
    <%= paginate @products %>
   </div>
 </div>
+
+<% end %>

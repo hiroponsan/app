@@ -1,7 +1,15 @@
-<header class="fixed">
-
+<header class = "top clearfix">
+   C-Campas
+  <div class = "search">
+    <%= form_tag("/search", method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="授業名で検索" type="text" value="">
+    <button class="btn-search" title="検索" type="submit"><i class="icon-search">検索</i></button>
+    <% end %>
   </div>
+
 </header>
+  <a href ="/">ランキングに戻る</a></div>
+ <a href ="/">授業を検索する</a>
 
 <div class ="main1 clearfix">
   <div class ="title1">
@@ -12,6 +20,17 @@
   </div>
 <!-- <form action="entry/<%= @product_id %>" method="post"> -->
   <%= form_tag("/entry/#{@product.id}", :method => :post) do %>
+   <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2>エラーが発生しました。</h2>
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
     <div class = "info clearfix">
 
 <!--       <div class ="info clearfix"> -->
@@ -39,7 +58,6 @@
       </div>
       <div class = "attendence clearfix">出欠の有無
         <input type="radio" name="attendence" value="1">毎回取る
-        <input type="radio" name="attendence" value="0.5">たまに取る
         <input type="radio" name="attendence" value="0">取らない
       </div>
       <div class = "test">テストの有無

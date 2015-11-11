@@ -15,6 +15,7 @@
    </div>
  </div>
  <a href ="/">ランキングに戻る</a></div>
+ <a href ="/">授業を検索する</a>
 </header>
 
 
@@ -22,12 +23,13 @@
 <div class = "main">
   <dt>
   <% if @reviews.blank? %>
-  <div class ="a">まだレビューがありません
+ <p> <div class ="a">まだレビューがありません
 
-  <a href ="/entry/<%= @product.id %>">新たにれびゅーを書く</a>
+<a href ="/entry/<%= @product.id %>">新たにレビューを書く</a></p>
 
   </div>
   <% else %>
+<h1>   <%= @product.title %> <%= @product.professer %>　　平均楽単度　:　<%= @input_easy %>　　平均充実度　:　<%= @input_fun %></h1>
    <% @reviews.each do |review| %>
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
     </div>
