@@ -1,16 +1,20 @@
-<header>
- <div class = "C-Camp"><a href ="/">C-Campas</a>
-   <div class = "to_detail clearfix">
-   <a href = "<%= @product.url %>">授業詳細を見る</a>
-   </div>
-   <div class = "write_review">
-   <a style = "float:right" href = "/entry/<%= @product.id %>">授業評価を書く</a>
-   </div>
- </div>
- <a href ="/">ランキングに戻る</a></div>
- <a href ="/">授業を検索する</a>
+<header class = "top clearfix">
+   C-Campas
+  <div class = "search">
+    <%= form_tag("/search", method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="授業名で検索" type="text" value="">
+    <button class="btn-search" title="検索" type="submit"><i class="icon-search">検索</i></button>
+    <% end %>
+  </div>
 </header>
 
+<style>
+  
+strong {font-size: 18px;}
+
+</style>
+ <a href ="/">ランキングに戻る</a></div>
+ <a href ="/">他のキーワードで検索</a>
 
     <% @products.each do |product| %>
   <ul>
