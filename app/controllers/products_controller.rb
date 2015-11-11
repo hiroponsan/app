@@ -7,15 +7,10 @@ class ProductsController < ApplicationController
     @fun = @product.reviews
     @atd = @product.reviews
 
-    if @reviews == []
-      @report = "不明"
-      @atd = "不明"
-      @test = "不明"
-    else
-
     @input_easy = @product.reviews.average(:easy).round
     @input_fun = @product.reviews.average(:fun).round
 
+   
       input = @product.reviews.average(:report).round 
       if input >= 0.5 
         @report = "有り"
@@ -39,7 +34,7 @@ class ProductsController < ApplicationController
   end
 
   def show_professer
-    @product = Product.find(params[:id])
+    @product = Product.find_by(professer: params[:professer])
   end
 
   def search_params
