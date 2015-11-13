@@ -1,35 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href ="/assets/css/reset.css" rel ="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<div class ="header">
+  <strong id ="1">充実授業ランキング</strong>　　<strong>楽単授業ランキング</strong>　　<a href ="/"><strong>注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href = "<%= @product.url %>"></a> <a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<a href = "/entry/<%= @product.id %>"> <a href ="/pre_search_entry"><strong>授業評価を書く</strong></a>
+  </div>
 
 <style>
   .review_all {margin:0 0 0 0;}
   .review_all {color: black;}
   .each_review {border-bottom: 3px ridge #CD853F;}
+  #words {color: yellowgreen;}
+body {margin: 0 auto;}
+body {text-align: center;}
+.header strong{color: white;}
+.header strong{font-size: 18px;}
+.header strong{display: inline-table;}
+.header {padding-top: 30px;}
+.header {background-color: yellowgreen;}
+.header {height:50px;}
+
+
+
+
+#kkk {color: black;}
+#color {color: orange;}
+#here {float: right;}
+#here {margin-right:100px;}
+#here {background-color: blue;}
+#here {color: white;}
+
+
 </style>
-
-<header>
- <div class = "C-Camp"><a href ="/">C-Campas</a>
-   <div class = "to_detail clearfix">
-   <a href = "<%= @product.url %>">授業詳細を見る</a>
-   </div>
-   <div class = "write_review">
-   <a style = "float:right" href = "/entry/<%= @product.id %>">授業評価を書く</a>
-   </div>
- </div>
- <a href ="/">ランキングに戻る</a></div>
- <a href ="/">授業を検索する</a>
-</header>
-
-
-
 <div class = "main">
   <dt>
   <% if @reviews.blank? %>
  <p> <div class ="a">まだレビューがありません
 
-<a href ="/entry/<%= @product.id %>">新たにレビューを書く</a></p>
+<a href ="/entry/<%= @product.id %>">レビューはこちらから</a></p>
 
   </div>
   <% else %>
-<h1>   <%= @product.title %> <%= @product.professer %>　　平均楽単度　:　<%= @input_easy %>　　平均充実度　:　<%= @input_fun %></h1>
+<h1>平均楽単度　:　<%= @input_easy %>/5　　平均充実度　:　<%= @input_fun %>/5　　<a href ="/entry/<%= @product.id %>"><div id ="here">レビューはこちらから</div></a>　</h1>
    <% @reviews.each do |review| %>
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
     </div>
@@ -37,9 +65,9 @@
     </div>
   </dt>
   <div class = "rate clearfix">
-    <div class = "easy"><strong>楽単度 : <%= review.easy %>/5</strong><div id="star"></div>
+    <div class = "easy">楽単度 : <%= review.easy %>/5<div id="star"></div>
     </div>
-    <div class = "fun clearfix"><strong>面白さ : <%= review.fun %>/5</strong>
+    <div class = "fun clearfix">面白さ : <%= review.fun %>/5
     </div>
   </div>
   <div class = "info clearfix">
@@ -57,7 +85,7 @@
     </div>
   <% else %>
       <div class = "each_review">
-        <%= review.review %></br>
+       <strong id ="color">コメント</strong> : <%= review.review %></br>
       </div>
     <% end %>
     <% end %>
@@ -75,15 +103,27 @@
 </html>
 
 <script>
-$('#star').raty({
-  size     : 36,
-  starOff: '/assets/star-off.png',
-  starOn : '/assets/star-on.png',
-  scoreName: 'review[point]' 
+$(function(){
+
+  $('strong').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+
+
+
+
 });
+
 </script>
-
-<script src ="app/assets/javascript/jquery.raty.js">
-
-<script>
 

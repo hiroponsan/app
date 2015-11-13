@@ -20,6 +20,25 @@ class TopController < ApplicationController
   def error
   end
 
+  def pre_search
+    @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
+  end
+
+  def pre_search_review
+    @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
+  end
+
+  def pre_search_entry
+    @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
+  end
+
+  def search_2
+    @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
+  end
+
+
+
+
 
   def post
    @review = Review.create(create_params)
