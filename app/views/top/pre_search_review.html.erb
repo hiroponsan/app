@@ -1,0 +1,74 @@
+<style>
+
+body {margin: 0 auto;}
+body {text-align: center;}
+.logo{padding-top: 150px;}
+h1 {font-size: 50px;}
+body {margin: 0 auto;}
+body {text-align: center;}
+strong{color: white;}
+strong{font-size: 18px;}
+strong{display: inline-table;}
+.header {padding-top: 30px;}
+.header {background-color: yellowgreen;}
+.header {height:50px;}
+
+
+
+
+#review {color: pink;}
+#review {border-bottom: 2px ridge orange;}
+.search__query {height: 40px;}
+.search__query {width: 60%;}
+.search__query {font-size: 24px;}
+.search__query {margin-bottom: 10px;}
+.btn-search {height: 40px;}
+.btn-search {width: 130px;}
+.btn-search {margin-bottom: 10px;}
+.enter {padding-top: 30px;}
+.icon-search {font-size: 24px;}
+
+</style>
+
+<div class ="header">
+  <strong id ="rank_1">充実授業ランキング</strong>　　<strong>楽単授業ランキング</strong>　　<a href ="/"><strong>注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<strong id ="review">授業評価を見る</strong>　　<strong>授業評価を書く</strong>
+  </div>
+
+
+<div class ="logo">
+<h1> C-CAMPAS </h1>
+</div>
+
+ <div class = "search">
+    <%= form_tag("/search", method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="評価を見たい授業の名前で検索" type="text" value="">
+    <div class ="enter">
+
+    <button class="btn-search" title="検索" type="submit"><i class="icon-search">検索する</i></button>
+    </div>
+    <% end %>
+  </div>
+</header>
+
+<script>
+
+$(function(){
+
+  $('strong').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+
+});
+
+</script>
