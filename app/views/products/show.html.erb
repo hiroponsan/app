@@ -19,8 +19,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <div class ="header">
-  <strong id ="1">充実授業ランキング</strong>　　<strong>楽単授業ランキング</strong>　　<a href ="/"><strong>注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href = "<%= @product.url %>"></a> <a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<a href = "/entry/<%= @product.id %>"> <a href ="/pre_search_entry"><strong>授業評価を書く</strong></a>
-  </div>
+  <strong id ="">充実度ランキング</strong>　　<strong>楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong>授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong>ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong>新規登録</strong></a>　　<a href ="/users/sign_in"><strong>ログイン</strong>
+  <% end %>
+  </div> 
 
 <style>
   .review_all {margin:0 0 0 0;}
@@ -46,18 +47,17 @@ body {text-align: center;}
 #here {background-color: blue;}
 #here {color: white;}
 
-
 </style>
 <div class = "main">
   <dt>
   <% if @reviews.blank? %>
  <p> <div class ="a">まだレビューがありません
 
-<a href ="/entry/<%= @product.id %>">レビューはこちらから</a></p>
+<a href ="/entry/<%= @product.id %>">この授業の最初の評価を書く</a></p>
 
   </div>
   <% else %>
-<h1>平均楽単度　:　<%= @input_easy %>/5　　平均充実度　:　<%= @input_fun %>/5　　<a href ="/entry/<%= @product.id %>"><div id ="here">レビューはこちらから</div></a>　</h1>
+<h1 id ="top">平均楽単度　:　<%= @input_easy %>/5　　平均充実度　:　<%= @input_fun %>/5　　<a href ="/entry/<%= @product.id %>"><div id ="here">この授業の評価を書く</div></a>　</h1>
    <% @reviews.each do |review| %>
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
     </div>
@@ -77,6 +77,7 @@ body {text-align: center;}
     </div>
     <div class = "test">テスト : <%= @test %>
     </div>
+    <div class ="nickname"> <%= @depart %>学科所属 <%= @nickname %>さん
   </div>
   <div class = "review_all" style>
   <% if @reviews.length == 12 %>
@@ -117,9 +118,6 @@ $(function(){
       'border-bottom' : 'none'
     });
   });
-
-
-
 
 
 

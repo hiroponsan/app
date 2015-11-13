@@ -24,6 +24,7 @@
 <style>
 body {margin: 0 auto;}
 body {text-align: center;}
+body {padding-bottom: 30px;}
 strong{color: white;}
 strong{font-size: 18px;}
 strong{display: inline-table;}
@@ -33,19 +34,24 @@ strong{display: inline-table;}
 
 
 
-#left {padding-right: 90px;}
 
 
 
+#box {background-color: orange;}
+#box {padding-top: 20px;}
+#box {height: 30px;}
+#box {margin: :0 auto;}
 
 </style>
 <div class ="header">
-  <strong id ="1">充実授業ランキング</strong>　　<strong>楽単授業ランキング</strong>　　<a href ="/"><strong>注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<strong>授業評価を書く</strong>
-  </div>
+  <strong id ="">充実度ランキング</strong>　　<strong>楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong>授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong>ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong>新規登録</strong></a>　　<a href ="/users/sign_in"><strong>ログイン</strong>
+  <% end %>
+    </div> 
 
 
 <% if @products.blank? %>
 <h3>"<%= params[:keyword] %>"の検索結果はありません</h3>
+<h3><a href ="/pre_search">他のキーワードで検索する</h3></a>
 <% else %> 
 
 <div class ="main">
@@ -53,7 +59,7 @@ strong{display: inline-table;}
 <h3 id ="left">"<%= params[:keyword] %>"の検索結果を表示しています。</h3>
 <% @products.each do |product| %>
   <ul>
-    <h3><a href= "/products/<%= product.id %>"><span><%= product.title %>  <strong><%= product.professer %>先生</strong></li></span>
+    <h3><a href= "/products/<%= product.id %>"><span><%= product.title %>  <%= product.professer %>先生</li></span>
   </ul>
   <% end %>
   </div>
@@ -63,3 +69,30 @@ strong{display: inline-table;}
 </div>
 
 <% end %>
+
+
+<script>
+$(function(){
+
+  $('strong').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+
+
+
+
+});
+
+</script>
+

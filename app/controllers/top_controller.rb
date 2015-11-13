@@ -1,4 +1,5 @@
 class TopController < ApplicationController
+  before_action :authenticate_user!, except: :index
 
    def index
     product_ids = Review.group(:product_id).order('count_product_id DESC').limit(20).count(:product_id).keys
@@ -33,6 +34,10 @@ class TopController < ApplicationController
   end
 
   def search_2
+    @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
+  end
+
+  def search_3
     @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
   end
 

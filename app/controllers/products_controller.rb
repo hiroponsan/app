@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
 
   def show
     @product = Product.find(params[:id])
@@ -6,7 +7,7 @@ class ProductsController < ApplicationController
     @easy = @product.reviews
     @fun = @product.reviews
     @atd = @product.reviews
-    
+   
     if @reviews == []
       @report = "不明"
       @atd = "不明"
