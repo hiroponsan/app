@@ -46,6 +46,8 @@ body {text-align: center;}
 #here {margin-right:100px;}
 #here {background-color: blue;}
 #here {color: white;}
+.nickname {background-color: yellow;}
+.nickname {color: red;}
 
 </style>
 <div class = "main">
@@ -77,8 +79,7 @@ body {text-align: center;}
     </div>
     <div class = "test">テスト : <%= @test %>
     </div>
-    <div class ="nickname"> <%= @depart %>学科所属 <%= @nickname %>さん
-  </div>
+
   <div class = "review_all" style>
   <% if @reviews.length == 12 %>
     <div class = "each_review">
@@ -87,7 +88,10 @@ body {text-align: center;}
   <% else %>
       <div class = "each_review">
        <strong id ="color">コメント</strong> : <%= review.review %></br>
+           <div class ="nickname"> <%= current_user.email %>学科 
+  </div>
       </div>
+
     <% end %>
     <% end %>
 

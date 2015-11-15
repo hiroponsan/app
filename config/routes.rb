@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/pre_search_entry' => 'top#pre_search_entry'
   get '/search_2' => 'top#search_2'
   get '/search_3' => 'top#search_3'
+  get '/users/sign_out' => 'devise/sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
