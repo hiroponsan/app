@@ -83,13 +83,10 @@ body {text-align: center;}
   <div class = "review_all" style>
   <% if @reviews.length == 12 %>
     <div class = "each_review">
-    <p><%= @reviews %></p>
     </div>
   <% else %>
       <div class = "each_review">
        <strong id ="color">コメント</strong> : <%= review.review %></br>
-           <div class ="nickname"> <%= @user.depart %>学科 
-  </div>
       </div>
 
     <% end %>
