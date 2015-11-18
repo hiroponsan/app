@@ -60,6 +60,9 @@ body {text-align: center;}
 
 img {margin-top: 16px;}
 
+.comment {width: 60%;}
+.comment {margin: 0 auto;}
+
 
 #size {line-height: 40px;}
 
@@ -207,7 +210,7 @@ img {margin-top: 16px;}
     </div>
   <% else %>
       <div class = "each_review">
-       <strong id ="color">コメント</strong> : <%= review.review %></br>
+     <div class = "comment">  <strong id ="color">コメント</strong> : <%= review.review %></div>
 <div class ="nickname"> by　<%= review.user.depart %>　<%= review.user.nickname %>さん</div>
       </div>
  
