@@ -36,11 +36,16 @@ strong{display: inline-table;}
 
 
 
-
+.kaminari {font-size: 24px;}
 #box {background-color: orange;}
 #box {padding-top: 20px;}
 #box {height: 30px;}
 #box {margin: :0 auto;}
+
+.kaminari {font-size: 24px;}
+
+
+.all {padding-right: 35px;}
 
 </style>
 <div class ="header">
@@ -48,6 +53,7 @@ strong{display: inline-table;}
   <% end %>
     </div> 
 
+<div class ="all">
 
 <% if @products.blank? %>
 <h3>"<%= params[:keyword] %>"の検索結果はありません</h3>
@@ -68,7 +74,11 @@ strong{display: inline-table;}
   </div>
 </div>
 
+
+
 <% end %>
+
+</div>
 
 
 <script>

@@ -33,6 +33,12 @@ strong{display: inline-table;}
 .header {height:50px;}
 
 
+.kaminari {font-size: 24px;}
+
+
+.all {padding-right: 35px;}
+
+
 
 
 </style>
@@ -46,6 +52,8 @@ strong{display: inline-table;}
   <strong id ="fun">充実度ランキング</strong>　　<strong id ="easy">楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_in">ログイン</strong>
   <% end %>
     </div> 
+
+    
 
 <% if @products.blank? %>
 <h3>"<%= params[:keyword] %>"の検索結果はありません</h3>
