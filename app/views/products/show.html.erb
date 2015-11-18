@@ -33,21 +33,37 @@ body {text-align: center;}
 .header strong{color: white;}
 .header strong{font-size: 18px;}
 .header strong{display: inline-table;}
-.header {padding-top: 30px;}
+.header {padding-top: 25px;}
 .header {background-color: yellowgreen;}
 .header {height:50px;}
 
 
-
-
 #kkk {color: black;}
 #color {color: orange;}
-#here {float: right;}
-#here {margin-right:100px;}
+#here {margin: 0 auto;}
 #here {background-color: blue;}
 #here {color: white;}
+#here {width: 400px;}
 .nickname {background-color: yellow;}
 .nickname {color: red;}
+.top {margin: 0 auto;}
+.top img {margin-top: 1.5px;}
+#exeption img {position: absolute;}
+.top img {margin-left: 13px;}
+#width {width: 200px;}
+
+#down {margin-top:17px;}
+#below {font-size: 25px;}
+
+#left {margin-left: 30px;}
+
+
+img {margin-top: 16px;}
+
+
+#size {line-height: 40px;}
+
+#size {border-bottom: 3px solid orange}
 
 </style>
 <div class = "main">
@@ -59,17 +75,122 @@ body {text-align: center;}
 
   </div>
   <% else %>
-<h1 id ="top">平均楽単度　:　<%= @input_easy %>/5　　平均充実度　:　<%= @input_fun %>/5　　<a href ="/entry/<%= @product.id %>"><div id ="here">この授業の評価を書く</div></a>　</h1>
+<% if @input_easy == 1 %>
+<strong id ="below">平均楽単度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+<% if @input_easy == 2 %>
+<strong id ="below">平均楽単度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+<% if @input_easy == 3 %> 
+<strong id ="below">平均楽単度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+
+<% if @input_easy == 4 %> 
+<strong id ="below">平均楽単度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+<% if @input_easy == 5 %> 
+<strong id ="below">平均楽単度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<% end %>
+
+<% if @input_fun == 1 %>
+<div class -"left"><strong id ="below">平均充実度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+
+<% if @input_fun == 2 %>
+<div id -"left">
+<strong id ="below">平均充実度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+<% if @input_fun == 4 %> 
+<div id -"left">
+<strong id ="below">平均充実度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+
+<% if @input_fun == 4 %> 
+<div id  = "left">
+<strong id ="below">平均充実度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
+
+<% if @input_fun == 5 %> 
+<div id ="left">
+<strong id ="below">平均充実度 : </strong>
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+<img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px"> 
+
+<% end %>
+
+
+
+
+<h1 id ="size"><a href ="/entry/<%= @product.id %>"><div id ="here">この授業の評価を書く</div></a>　</h1></div>
    <% @reviews.each do |review| %>
+
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
     </div>
     <div class = "professer"><dl><a href ="/list"><h3>担当教員 : <%= @product.professer %></dl></h3></a>
     </div>
   </dt>
-  <div class = "rate clearfix">
-    <div class = "easy">楽単度 : <%= review.easy %>/5<div id="star"></div>
-    </div>
-    <div class = "fun clearfix">面白さ : <%= review.fun %>/5
+  <div class = "rate">
+    楽単度: 
+    <% if review.easy == 1 %><span id ="up">⭐ ☆ ☆ ☆ ☆</span>️<% end %>
+    <% if review.easy == 2 %> <span id ="up">⭐️ ⭐ ☆ ☆ ☆</span><% end %>
+    <% if review.easy == 3 %> <span id ="up">⭐️ ⭐ ⭐</span>️️ ☆ ☆<% end %>
+    <% if review.easy == 4 %> <span id ="up">⭐️ ⭐ ⭐ ⭐</span>️️️ ☆<% end %>
+    <% if review.easy == 5 %><span id ="up">⭐️ ⭐ ⭐ ⭐️️️ ⭐</span>️<% end %>
+   
+    <div class = "fun clearfix">
+    面白さ: 
+     <% if review.fun == 1 %><span id ="up">⭐</span>️ ☆ ☆ ☆ ☆<% end %>
+    <% if review.fun == 2 %><span id ="up">⭐️ ⭐</span>️ ☆ ☆ ☆<% end %>
+    <% if review.fun == 3 %><span id ="up">⭐️ ⭐️ ⭐</span>️ ☆ ☆<% end %>
+    <% if review.fun == 4 %><span id ="up">⭐️ ⭐️ ⭐ ⭐️</span>️ ☆<% end %>
+     <% if review.fun == 5 %><span id ="up">⭐️ ⭐️ ⭐ ⭐️ ⭐️</span>️<% end %>
     </div>
   </div>
   <div class = "info clearfix">
@@ -87,7 +208,10 @@ body {text-align: center;}
   <% else %>
       <div class = "each_review">
        <strong id ="color">コメント</strong> : <%= review.review %></br>
+<div class ="nickname"> by　<%= review.user.depart %>　<%= review.user.nickname %>さん</div>
       </div>
+ 
+
 
     <% end %>
     <% end %>
@@ -226,6 +350,24 @@ $(function(){
       'border-bottom' : 'none'
     });
   });
+
+
+                    $('#index').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+
+                  });
 
 
 </script>

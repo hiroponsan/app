@@ -46,13 +46,10 @@ class TopController < ApplicationController
 
 
   def post
-   @review = Review.create(create_params)
-   if @review.save
-   redirect_to action: "index", notice: ''
- else
-  render :error
+   current_user.reviews.create(create_params)
+   redirect_to action: "index"
   end
-end
+
 
   def entry
     @product = Product.find(entry_params[:id])

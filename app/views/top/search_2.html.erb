@@ -192,15 +192,22 @@ $(function(){
   });
 
 
-
-
-
-
-
-  $('#index').css({
+  $('#index').hover(function(){
+    $(this).css({
       'color' : 'pink',
       'border-bottom' : '2px ridge orange'
     });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+
+
 
 
 
