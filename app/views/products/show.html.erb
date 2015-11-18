@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+
 
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -24,15 +23,22 @@
   </div> 
 
 <style>
+
+html {width: 100%;}
+
+body {width: 100%;}
+body {margin: 0;}
+body {text-align: center;}
+
+
+
   .review_all {margin:0 0 0 0;}
   .review_all {color: black;}
   .each_review {border-bottom: 3px ridge #CD853F;}
   #words {color: yellowgreen;}
-body {margin: 0 auto;}
-body {text-align: center;}
 
-body {width: 100%;}
 
+.header {width: 100%;}
 .header strong{color: white;}
 .header strong{font-size: 18px;}
 .header strong{display: inline-table;}
@@ -64,7 +70,7 @@ img {margin-top: 16px;}
 .comment {margin: 0 auto;}
 
 
-#size {line-height: 40px;}
+
 
 #size {border-bottom: 3px solid orange}
 
@@ -74,11 +80,10 @@ img {margin-top: 16px;}
 
 </style>
 <div class = "main">
-  <dt>
   <% if @reviews.blank? %>
- <p> <div class ="a">まだレビューがありません
+ <p> <div class ="a">まだレビューがありません<p>
 
-<a href ="/entry/<%= @product.id %>">この授業の最初の評価を書く</a></p>
+<a href ="/entry/<%= @product.id %>"><p>この授業の最初の評価を書く</p></a>
 
   </div>
   <% else %>
