@@ -31,7 +31,7 @@ strong{display: inline-table;}
 .header {padding-top: 30px;}
 .header {background-color: yellowgreen;}
 .header {height:50px;}
-
+.fix {padding-left: 35px;}
 #write {color: pink;}
 #write {border-bottom: 2px ridge orange;}
 
@@ -79,8 +79,9 @@ strong{display: inline-table;}
    <%= paginate @products %>
   </div>
 </div>
+<div class ="fix">
 <div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></h4></div>
-
+</div>
 <% end %>
 
 </div>
