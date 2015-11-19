@@ -101,6 +101,7 @@ img {margin-top: 16px;}
 
 <a href ="/entry/<%= @product.id %>"><p>この授業の最初の評価を書く</p></a>
 
+<h4 id ="aaa"><div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></h4></div>
   </div>
   <% else %>
 <% if @input_easy == 1 %>
@@ -242,13 +243,14 @@ img {margin-top: 16px;}
 </div>
     <% end %>
     <% end %>
-
+    <h4 id ="aaa"><div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></h4></div>
+<h4 id ="aaa"><div class ="green_box"><p><%= link_to 'ランキングに戻る', :back, :style=>"color:white;" %></p></h4></div>
   <% end %>
   </div>
 
-<h4 id ="aaa"><div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></h4></div>
 
- <h4 id ="aaa"><div class ="green_box"><p><%= link_to 'ランキングに戻る', :back, :style=>"color:white;" %></p></h4></div>
+
+ 
 
 </div>
 
