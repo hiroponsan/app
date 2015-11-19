@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :pages
+  resources :reviews
   root 'top#index'
   get '/products/:id' => 'products#show'
   get '/link/:id' => 'top#link'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   get '/search_2' => 'top#search_2'
   get '/search_3' => 'top#search_3'
   get '/users/sign_out' => 'devise/sessions#destroy'
+  get '/reviews/:id/edit' => 'top#edit'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

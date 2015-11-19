@@ -78,6 +78,22 @@ img {margin-top: 16px;}
 .user {width: 100%;}
 .user {margin: 0 auto;}
 
+
+.green_box {width: 200px;}
+.green_box {height:30px;}
+.green_box {background-color: green;}
+.green_box {color: white;}
+.green_box {font-size: 18px;}
+.green_box {margin: 0 auto;}
+
+.green_box p {color: white;}
+
+#aaa {color: white;}
+
+
+
+
+
 </style>
 <div class = "main">
   <% if @reviews.blank? %>
@@ -219,17 +235,21 @@ img {margin-top: 16px;}
     </div>
   <% else %>
       <div class = "each_review">
-     <div class = "comment">  <strong id ="color">コメント</strong> : <%= review.review %></div>
-<div class ="nickname"> <div class ="user">by　<%= review.user.depart %>　<%= review.user.nickname %>さん</div></div>
-      </div>
- 
+     <div class = "comment"><strong id ="color">コメント</strong> : <%= review.review %></div>
+ <div class ="nickname"> <div class ="user">by　<%= review.user.depart %><%= review.user.nickname %>さん
 
-
+</div></div>
+</div>
     <% end %>
     <% end %>
 
   <% end %>
   </div>
+
+<div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></div>
+
+ <h4 id ="aaa"><div class ="green_box"><p><%= link_to 'ランキングに戻る', :back style=>"color:white;" %></p></h4></div>
+
 </div>
 
 <% else %>

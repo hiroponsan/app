@@ -41,6 +41,10 @@ class TopController < ApplicationController
     @products = Product.where('title LIKE(?)', "%#{search_params[:keyword]}%").page(params[:page])
   end
 
+  def edit
+  end
+
+
 
 
 
