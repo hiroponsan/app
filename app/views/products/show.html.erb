@@ -167,7 +167,7 @@ img {margin-top: 16px;}
 <img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px">
 <img src ="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLfNhmNUd-uE8tlKQnJah9k2xhFZfCjsPcSDM7B45b28R_nlhpp-68Q" width="24px"><% end %>
 
-<% if @input_fun == 4 %>
+<% if @input_fun == 3 %>
 <div id -"left">
 <strong id ="below">平均充実度 : </strong>
 <img src ="http://free-illustrations-ls01.gatag.net/images/lgi01a201310241900.jpg" width="25px">
@@ -209,21 +209,21 @@ img {margin-top: 16px;}
     </div>
   </dt>
   <div class = "rate">
-    楽単度: 
-    <% if review.easy == 1 %><span id ="up">⭐ ☆ ☆ ☆ ☆</span>️<% end %>
-    <% if review.easy == 2 %> <span id ="up">⭐️ ⭐ ☆ ☆ ☆</span><% end %>
-    <% if review.easy == 3 %> <span id ="up">⭐️ ⭐ ⭐</span>️️ ☆ ☆<% end %>
-    <% if review.easy == 4 %> <span id ="up">⭐️ ⭐ ⭐ ⭐</span>️️️ ☆<% end %>
-    <% if review.easy == 5 %><span id ="up">⭐️ ⭐ ⭐ ⭐️️️ ⭐</span>️<% end %>
+楽単度: 
+<% if review.easy == 1 %><span id ="up">⭐ ☆ ☆ ☆ ☆</span>️<% end %>
+<% if review.easy == 2 %> <span id ="up">⭐️ ⭐ ☆ ☆ ☆</span><% end %>
+<% if review.easy == 3 %> <span id ="up">⭐️ ⭐ ⭐</span>️️ ☆ ☆<% end %>
+<% if review.easy == 4 %> <span id ="up">⭐️ ⭐ ⭐ ⭐</span>️️️ ☆<% end %>
+<% if review.easy == 5 %><span id ="up">⭐️ ⭐ ⭐ ⭐️️️ ⭐</span>️<% end %>
    
     <div class = "fun clearfix">
-    面白さ: 
-     <% if review.fun == 1 %><span id ="up">⭐</span>️ ☆ ☆ ☆ ☆<% end %>
-    <% if review.fun == 2 %><span id ="up">⭐️ ⭐</span>️ ☆ ☆ ☆<% end %>
-    <% if review.fun == 3 %><span id ="up">⭐️ ⭐️ ⭐</span>️ ☆ ☆<% end %>
-    <% if review.fun == 4 %><span id ="up">⭐️ ⭐️ ⭐ ⭐️</span>️ ☆<% end %>
-     <% if review.fun == 5 %><span id ="up">⭐️ ⭐️ ⭐ ⭐️ ⭐️</span>️<% end %>
-    </div>
+面白さ: 
+<% if review.fun == 1 %><span id ="up">⭐</span>️ ☆ ☆ ☆ ☆<% end %>
+<% if review.fun == 2 %><span id ="up">⭐️ ⭐</span>️ ☆ ☆ ☆<% end %>
+<% if review.fun == 3 %><span id ="up">⭐️ ⭐️ ⭐</span>️ ☆ ☆<% end %>
+<% if review.fun == 4 %><span id ="up">⭐️ ⭐️ ⭐ ⭐️</span>️ ☆<% end %>
+<% if review.fun == 5 %><span id ="up">⭐️ ⭐️ ⭐ ⭐️ ⭐️</span>️<% end %>
+</div>
   </div>
   <div class = "info clearfix">
     <div class  = "report">レポート : <%= @report %>
