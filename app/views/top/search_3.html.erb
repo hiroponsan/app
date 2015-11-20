@@ -47,7 +47,7 @@ strong{display: inline-table;}
 
 
 .fix {padding-left: 35px;}
-
+.left {padding-left: 35px;}
 
 
 
@@ -84,14 +84,15 @@ strong{display: inline-table;}
   </div>
 </div>
 
-<div class ="fix">
-<h4><div class ="green_box"><p><%= link_to '検索画面に戻る', :back, :style=>"color:white;" %></p></h4></div>
-<h4><div class ="green_box"><p><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></p></h4></div>
-</h4>
-
 
 <% end %>
 
+<div class ="fix">
+<h4><div class ="green_box"><p><%= link_to '検索画面に戻る', :back, :style=>"color:white;" %></p></h4></div>
+<div class ="left"><h4><div class ="green_box"><p><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></p></h4></div></h4>
+</div>
+
+</div>
 <script>
 
 
