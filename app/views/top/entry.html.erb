@@ -893,26 +893,28 @@ $(function(){
         <li>
        <label for="attendence" id ="report">出席の有無</label>
        <input type="radio"  name="attendence" value="1" checked="">有り　
-　        <input type="radio" name="report" value="0">無し
+　        <input type="radio" name="attendence" value="0">無し
 
         </li>
         <li>
         <label for="test" id ="report">テストの有無</label>
        <input type="radio"  name="test" value="1" checked="">有り　
-　        <input type="radio" name="report" value="0">無し
+　        <input type="radio" name="test" value="0">無し
 
         <li>
 
 
           <label for="message">授業のレビュー</label>
     <input type="hidden" name="product_id" value="<%= @product.id %>">
-            <textarea cols="50" rows="5" id="message" name ="review" placeholder ="ここからお書きください" required ="required"></textarea>
+            <textarea cols="50" rows="5" id="message" name ="review" placeholder ="ここからお書きください"></textarea>
+               <h5 class="notice" style="color:red;"><%= notice %></h5>
     </li>
   </ul>
     <p>
         <button type="submit" class="action">送信する</button>
         <button type="reset" class="right">書き直す</button>
     </p>
+
 </form>
 <% end %>
 </article>

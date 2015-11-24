@@ -60,7 +60,7 @@ end
    redirect_to action: "thank_you"
  elsif @review
   redirect_to action: "post"
-  flash[:alert] =  "✴︎コメントは最低でも１文字以上お書きください"
+  flash[:notice] =  "✴︎コメントは最低でも１文字以上お書きください"
 end
  end
 
