@@ -60,6 +60,7 @@ body {margin: 0 auto;}
 
 .nickname {background-color: yellow;}
 .nickname {color: red;}
+.nickname {margin-top: 10px;}
 .top {margin: 0 auto;}
 .top img {margin-top: 1.5px;}
 .top img {margin-left: 13px;}
@@ -71,11 +72,24 @@ body {margin: 0 auto;}
 
 img {margin-top: 16px;}
 
-.comment {width: 100%;}
+.comment {width: 292px;}
+.comment {height: 125px;}
+.comment {text-align: left;}
+.comment {padding-bottom: 15px;}
+
+
 .comment {margin: 0 auto;}
 
+.comment {border-bottom: 3px solid gray;}
+.comment {border-top: 3px solid gray;}
+.comment {border-left: 3px solid gray;}
+.comment {border-right: 3px solid gray;}
 
 
+.comment {padding-right: 10px;}
+.comment {padding-left: 10px;}
+.comment {padding-bottom: 10px;}
+.comment {padding-top: 10px;}
 
 #size {border-bottom: 3px solid orange}
 
@@ -104,9 +118,13 @@ img {margin-top: 16px;}
 </style>
 <div class = "main">
   <% if @reviews.blank? %>
- <p> <div class ="a">まだレビューがありません<p>
+   <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
+    </div>
+    <div class = "professer"><dl><h3>担当教員 : <%= @product.professer %></dl></h3></a>
+    </div>
+ <p> <div class ="a">この授業にはまだレビューがありません<p>
 
-<a href ="/entry/<%= @product.id %>"><p>この授業の最初の評価を書く</p></a>
+<a href ="/entry/<%= @product.id %>"><p>最初のレビューを書く</p></a>
 
 <h4 id ="aaa"><div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></h4></div>
   </div>
@@ -209,7 +227,7 @@ img {margin-top: 16px;}
 
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
     </div>
-    <div class = "professer"><dl><a href ="/list"><h3>担当教員 : <%= @product.professer %></dl></h3></a>
+    <div class = "professer"><dl><h3>担当教員 : <%= @product.professer %></dl></h3></a>
     </div>
   </dt>
   <div class = "rate">
@@ -243,7 +261,7 @@ img {margin-top: 16px;}
     </div>
   <% else %>
       <div class = "each_review">
-     <div class = "comment"><strong id ="color">レビュー</strong> : <%= review.review %></div>
+     <div class = "comment"><strong id ="color"></strong> <%= review.review %></div>
  <div class ="nickname"> <div class ="user">by　<%= review.user.depart %>　<%= review.user.nickname %>さん
 
 </div></div>

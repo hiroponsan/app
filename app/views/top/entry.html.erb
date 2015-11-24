@@ -665,45 +665,8 @@ h2 {line-height: 30px;}
 </style>
 
 
-<script type="text/javascript">
+<script>
 
-function validate(f)
-{
-  if(f.easy.value == "") 
-  {
-    alert("楽単度を入力してください");
-    return false;
-  }
-  else if(f.fun.value =="");
-  {
-    alert("面白さを入力してください");
-    return false;
-  }
-  else if(f.report.value =="");
-  {
-    alert("レポートの有無を入力してください");
-    return false;
-  }
-  else if(f.attendence.value == "")
-  {
-    alert("出席の有無を入力してください");
-    return false;
-  }
-  else if(f.test.value =="")
-  {
-    alert("テストの有無を入力してください");
-    return false;
-  }
-  else if(f.review.value =="")
-  
-    alert("コメントを何かお書きください")
-    return false;
-  }
-  return true;
-}
-
- $("input:checkbox, input:radio, input:file, select").uniform();
-      
 
 $(function(){
 
@@ -834,6 +797,30 @@ $(function(){
 
 
 
+
+
+function  (toggle) 
+
+{
+  if (document.forms.registration.value != "")
+    $(".action").css("opacity, 1")
+} else 
+{
+  $(".action").css("opacity, .3")
+}
+return true
+
+
+
+
+
+
+
+
+
+
+
+
   });
 
 
@@ -872,7 +859,7 @@ $(function(){
   <%= form_tag("/entry/#{@product.id}", :validate=> true, :method => :post ) do %>
 <article>
 
-<form>
+<form id ="registration" name ="form">
   <ul>
         <li>
           <label for="name">
@@ -880,11 +867,11 @@ $(function(){
             <label class = "easy_1" style="margin-right: 8px">
           <strong></strong>
         </label>
-          <input class="search__query1" name="easy" placeholder="" style="text-align: right" type="number" max="5" min="1" value="1" size="40px" required ="required"> (5段階評価でお選びください)
+          <input class="search__query1" name="easy" placeholder="" style="text-align: right" type="number" max="5" min="1" value="1" size="40px" required ="required"> (1〜5の中でお選びください)
         </li>
         <li>
           <label for="fun">面白さ</label>
-            <input class="search__query2 " name="fun" placeholder="" style="text-align: right" type="number" max="5" min="1" value="1" required ="required"> (5段階評価でお選びください)
+            <input class="search__query2 " name="fun" placeholder="" style="text-align: right" type="number" max="5" min="1" value="1" required ="required"> (1〜5の中でお選びください)
         </li>
         <li>
        <label for="report" id ="report">レポートの有無</label>
@@ -906,7 +893,7 @@ $(function(){
 
           <label for="message">授業のレビュー</label>
     <input type="hidden" name="product_id" value="<%= @product.id %>">
-            <textarea cols="50" rows="5" id="message" name ="review" placeholder ="ここからレビューお書きください"></textarea>
+            <textarea cols="50" rows="5" id="message" name ="review" placeholder ="ここからレビューお書きください" onclick="toggle();"></textarea>
                <h5 class="notice" style="color:red;"><%= notice %></h5>
     </li>
   </ul>
