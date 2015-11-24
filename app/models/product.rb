@@ -12,4 +12,9 @@ class Product < ActiveRecord::Base
     # self.reviews.average(:all).round
   # end
 
+
+  validates :easy, :fun, :test, :report, :review, :attendence, presence: true
+
+
+
 end

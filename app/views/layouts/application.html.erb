@@ -6,12 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+<style>
+
+.notice {color: red;}
+.notice {font-size: 25px;}
+
+</style>
+
+
 <body>
 <%= yield %>
- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<h5 class="notice" ><%= notice %></h5>
+<h5 class="alert" style="color:red;"><%= alert %></h5>
 
-  
 
 
 

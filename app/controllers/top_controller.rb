@@ -45,17 +45,31 @@ class TopController < ApplicationController
   end
 
 
+def thank_you 
+
+end
+
+
 
 
 
 
   def post
-   current_user.reviews.create(create_params)
-   redirect_to action: "index"
-  end
+   @review = current_user.reviews.create(create_params)
+   if @review.save
+   redirect_to action: "thank_you"
+ elsif @review
+  redirect_to action: "post"
+  flash[:alert] =  "✴︎コメントは最低でも１文字以上お書きください"
+end
+ end
 
 
   def entry
+    @product = Product.find(entry_params[:id])
+  end
+
+   def review
     @product = Product.find(entry_params[:id])
   end
 
