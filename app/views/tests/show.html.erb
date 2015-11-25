@@ -78,14 +78,18 @@ strong{display: inline-table;}
 
 
 
+<% if @tests.blank? %>
+<h3>まだこの授業の過去問はありません</h3>
+<a href ="/test/<%= @product.id %>"><h3>最初の過去問を投稿する</h3></a>
+
+<% end %>
+
+<% else %>
+
 
 <% @tests.each do |test| %>
 
-<% if @tests.blank? %>
-<h3><%= @empty %></h3>
-<a href ="/test/<%= @product.id %>"><h3><%= @new %></h3></a>
 
-<% else %>
 
 
 <p id="notice"><%= notice %></p>
@@ -114,7 +118,6 @@ strong{display: inline-table;}
 
 
 
-<% end %>
 
 <% end %>
 
