@@ -11,6 +11,10 @@ class TestsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @tests = @product.tests
+    if @tests == []
+      @empty = "まだこの授業の過去問はありません"
+      @new = "この授業の最初過去問をとうこうする"
+    end
     end
   
 
