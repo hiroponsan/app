@@ -40,10 +40,6 @@ class ProductsController < ApplicationController
       end
   end
 
-  def show_professer
-    @product = Product.find(params[:id])
-  end
-
   def search_params
     params.permit(:keyword)
   end

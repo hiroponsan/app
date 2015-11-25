@@ -55,3 +55,8 @@ gem 'rails_12factor'
 gem 'pg'
 gem 'devise'
 gem 'jquery-rails'
+gem "paperclip", "~> 4.3"
+
+
+
+

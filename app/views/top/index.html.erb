@@ -64,7 +64,7 @@ body {padding-bottom: 40px;}
       <% @ranking.each.with_index(1) do |product, i| %>
         <ul>
         <div class ="box">
-          <a href= "/products/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位  <%= product.title %><%= @input_easy %></p></a>
+          <a href= "/show/<%= product.id %>"><div class = "btn btn-warning" id ="btn"><p><%= i %>位  <%= product.title %><%= @input_easy %></p></a>
        
         </ul>
          <% end %>

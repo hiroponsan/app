@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href ="/assets/css/reset.css" rel ="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<style>
+body {margin: 0 auto;}
+body {text-align: center;}
+body {padding-bottom: 40px;}
+.header strong{color: white;}
+.header strong{font-size: 18px;}
+.header strong{display: inline-table;}
+.header {padding-top: 30px;}
+.header {background-color: yellowgreen;}
+.header {height:50px;}
+
+
+
+
+#img {padding-top: 30px;}
+
+#img {padding-left: 20px;}
+
+
+.all {padding-right: 35px;}
+body {margin: 0 auto;}
+body {text-align: center;}
+body {padding-bottom: 30px;}
+strong{color: white;}
+strong{font-size: 18px;}
+strong{display: inline-table;}
+.header {padding-top: 30px;}
+.header {background-color: yellowgreen;}
+.header {height:50px;}
+.fix {padding-left: 35px;}
+#write {color: pink;}
+#write {border-bottom: 2px ridge orange;}
+
+.kaminari {font-size: 24px;}
+
+
+.all {padding-right: 35px;}
+
+.green_box {width: 200px;}
+.green_box {height:30px;}
+.green_box {background-color: green;}
+
+.green_box {font-size: 18px;}
+.green_box {margin: 0 auto;}
+
+
+
+#img {color: orange;}
+
+
+
+</style>
+
+
+<div class ="header">
+ <strong id ="fun">充実度ランキング</strong>　　<strong id ="easy">楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_in">ログイン</strong>
+  <% end %>
+    </div> 
+
+<h2 style="padding-tpp:30px ">    <%= @product.title %></h2>
+<h2 style="padding-tpp:30px ">    <%= @product.professer %>先生</h2>
+
+
+<h2 id ="size"><a href ="/products/<%= @product.id %>"><div id ="here">この授業の口コミを見る</div></a>　</h2>
+<h2 id ="size"><a href ="/show/test/<%= @product.id %>"><div id ="here">この授業の過去問を見る</div></a>　</h2>
+
+<h4 id ="aaa"><div class ="green_box"><%= link_to '前へ戻る', :back, :style=>"color:white;" %></h4></div>
+<h4 id ="aaa"><div class ="green_box"><%= link_to '検索画面へ', pre_search_path, :style=>"color:white;" %></h4></div>
+
+ <h4 id ="aaaa"><div class ="green_box" id ="below"><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></h4></div>
+
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script>
+
+$(function(){
+
+  $('#review').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+    $('#fun').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+    $('#review').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+    $('#write').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+    $('#logout').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+     $('#sign_up').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+          $('#sign_in').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+               $('#easy').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+                    $('#search').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+});
+
+</script>
+</html>

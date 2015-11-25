@@ -44,6 +44,11 @@ class TopController < ApplicationController
   def edit
   end
 
+  def show 
+    @product = Product.find(params[:id])
+  end
+  
+
 
 def thank_you 
 

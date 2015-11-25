@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   has_many :reviews
+  has_many :tests
 
   # def easy_average
   #   reviews.average(:easy).round if reviews.present?

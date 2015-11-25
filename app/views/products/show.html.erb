@@ -221,8 +221,9 @@ img {margin-top: 16px;}
 
 
 
-
+<h2 id ="size"><a href ="/test/<%= @product.id %>"><div id ="here">この授業の過去問を載せる</div></a>　</h2>
 <h2 id ="size"><a href ="/entry/<%= @product.id %>"><div id ="here">この授業のレビューを書く</div></a>　</h2>
+
    <% @reviews.each do |review| %>
 
     <div class = "title" id ="title"><dl><h3> <span style="color: red;">授業名 : <%= @product.title %></dl></h3></span>
@@ -268,8 +269,9 @@ img {margin-top: 16px;}
 </div>
     <% end %>
     <% end %>
-    <h4 id ="aaa"><div class ="green_box"><p><%= link_to '検索結果に戻る', :back, :style=>"color:white;" %></p></h4></div>
+    <h4 id ="aaa"><div class ="green_box"><p><%= link_to '前に戻る', :back, :style=>"color:white;" %></p></h4></div>
 <h4 id ="aaa"><div class ="green_box"><p><%= link_to 'ランキングへ', root_path , :style=>"color:white;" %></p></h4></div>
+ <h4 id ="aaa"><div class ="green_box"><p><%= link_to '検索画面へ', pre_search_path, :style=>"color:white;" %></p></h4></div>
   <% end %>
   </div>
 
