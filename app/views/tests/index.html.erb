@@ -32,7 +32,8 @@ body {padding-bottom: 40px;}
 .header {background-color: yellowgreen;}
 .header {height:50px;}
 
-
+#easy {color : pink;}
+#easy {border-bottom: 2px ridge orange;}        
 
 
 #img {padding-top: 30px;}
@@ -64,13 +65,6 @@ body {padding-bottom: 40px;}
     </div> 
 
 
-<% if @tests.blank? %>
-<h3>まだこの授業の過去問はありません</h3>
-<a href ="/test/<%= @product.id %>"><h3>最初の過去問を投稿する</h3></a>
-
-<% end %>
-
-<% else %>
 
 <h1>過去問一覧</h1>
 
@@ -78,7 +72,7 @@ body {padding-bottom: 40px;}
 
 
 <li><p><%= test.year %>年度　 <%= test.semester %> 　教科書持ち込み <%= test.textbook %> <strong id ="title" style ="color : blue;">　　　<a href ="#">問題を見る</strong></a> <strong id ="close" style ="display:none;">　　　<a href ="#">閉じる</strong><p></a></li>
-<div class ="image" style="display:none;"><%= image_tag test.image.url(:large) %></p></div>
+<div class ="image" style=""><%= image_tag test.image.url(:large) %></p></div>
 
 
 
@@ -211,6 +205,20 @@ $(function(){
       'border-bottom' : 'none'
     });
   });
+
+                                     $('#index').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
+
 
 $("#title").click(function(){
   $(".image").slideDown();
