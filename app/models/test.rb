@@ -5,6 +5,9 @@ class Test < ActiveRecord::Base
   belongs_to :product
   belongs_to :user
 
+   validates :year, :semester, :textbook, :image, presence: true
+
+
 
 
 end

@@ -838,7 +838,7 @@ return true
 
 <div class ="header">
 
-  <strong id ="fun">充実度ランキング</strong>　　<strong id ="easy">楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href =""><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_up">ログイン</strong>
+  <a href ="/pre_search_test"><strong id ="fun">過去問を投稿する</strong></a>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href =""><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_up">ログイン</strong>
   <% end %>
   </div>
 
@@ -898,7 +898,7 @@ return true
     </li>
   </ul>
     <p>
-        <button type="submit" class="action">送信する</button>
+        <button type="submit" class="action">投稿する</button>
         <button type="reset" class="right">書き直す</button>
     </p>
 
@@ -909,6 +909,8 @@ return true
 
 
 <h4 id ="aaa"><div class ="green_box"><%= link_to '検索画面へ', pre_search_path, :style=>"color:white;" %></h4></div>
+
+ <h4 id ="aaaa" style="color:white;"><div class ="green_box" style="color:white;"><a href ="/show/test/<%= @product.id %>" style ="color:white;">過去問を見る</h4></div>
 
  <h4 id ="aaaa"><div class ="green_box" id ="below"><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></h4></div>
 

@@ -34,9 +34,9 @@ class ProductsController < ApplicationController
 
       input3 = @product.reviews.average(:test).round
       if input3 >= 0.5
-        @test = "有"
+        @test = "有り"
       else 
-        @test = "無"
+        @test = "無し"
       end
   end
 

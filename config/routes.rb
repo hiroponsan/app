@@ -20,8 +20,10 @@ Rails.application.routes.draw do
   get '/pre_search' =>'top#pre_search'
   get '/pre_search_review' =>'top#pre_search_review'
   get '/pre_search_entry' => 'top#pre_search_entry'
+  get '/pre_search_test' => 'top#pre_search_test'
   get '/search_2' => 'top#search_2'
   get '/search_3' => 'top#search_3'
+  get '/search_4' => 'top#search_4'
   get '/users/sign_out' => 'devise/sessions#destroy'
   get '/reviews/:id/edit' => 'top#edit'
   get '/thank_you' => 'top#thank_you'
@@ -31,6 +33,8 @@ Rails.application.routes.draw do
   get '/test/:id' => 'tests#set_product'
   get 'show/test/:id' => 'tests#show'
   get '/show/:id' => 'top#show'
+  get '/test/:id/image' => 'tests#show_image'
+  get '/tests/index' => 'tests#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

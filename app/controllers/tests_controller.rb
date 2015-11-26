@@ -12,12 +12,12 @@ class TestsController < ApplicationController
     @product = Product.find(params[:id])
     @tests = @product.tests
     end
+
   
 
   # GET /tests/new
   def new
     @test = current_user.tests.build
-
   end
 
   # GET /tests/1/edit
@@ -29,15 +29,13 @@ class TestsController < ApplicationController
   def create
     @test = current_user.tests.build(test_params)
 
-    respond_to do |format|
       if @test.save
-        format.html { redirect_to thank_you_path, notice: 'Test was successfully created.' }
-        format.json { render :show, status: :created, location: @test }
+        redirect_to action: "thank_you"
       else
-        format.html { render :new }
-        format.json { render json: @test.errors, status: :unprocessable_entity }
+        redirect_to action: "create"
+        flash[:notice] =  "✴︎画像ファイルをアップロードしてください"
       end
-    end
+   
   end
 
   # PATCH/PUT /tests/1

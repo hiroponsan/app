@@ -16,8 +16,8 @@ strong{display: inline-table;}
 
 
 
-#search {color: pink;}
-#search {border-bottom: 2px ridge orange;}
+#fun {color: pink;}
+#fun {border-bottom: 2px ridge orange;}
 .search__query {height: 40px;}
 .search__query {width: 60%;}
 .search__query {font-size: 24px;}
@@ -31,18 +31,18 @@ strong{display: inline-table;}
 </style>
 
 <div class ="header">
- <a href ="/pre_search_test"><strong id ="fun">過去問を投稿する</strong></a>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_up">ログイン</strong>
+  <a href ="/pre_search_test"><strong id ="fun">過去問を投稿する</strong></a>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_in">ログイン</strong>
   <% end %>
     </div> 
 
 
 <div class ="logo">
-<h1> C-CAMPAS  (授業を検索)</h1>
+<h1> C-CAMPAS  (過去問を投稿する)</h1>
 </div>
 
  <div class = "search">
-    <%= form_tag("/search", method: :get) do %>
-    <input class="search__query" name="keyword" placeholder="授業名で検索" type="text" value="">
+    <%= form_tag("/search_4", method: :get) do %>
+    <input class="search__query" name="keyword" placeholder="過去問を投稿したい授業の名前で検索" type="text" value="">
     <div class ="enter">
 
     <button class="btn-search" title="検索" type="submit"><i class="icon-search">検索する</i></button>
@@ -55,7 +55,7 @@ strong{display: inline-table;}
 
 $(function(){
 
-  $('#review').hover(function(){
+  $('').hover(function(){
     $(this).css({
       'color' : 'pink',
       'border-bottom' : '2px ridge orange'
@@ -82,7 +82,7 @@ $(function(){
     });
   });
 
-    $('#review').hover(function(){
+    $('#index').hover(function(){
     $(this).css({
       'color' : 'pink',
       'border-bottom' : '2px ridge orange'
@@ -161,7 +161,7 @@ $(function(){
     });
   });
 
-                    $('#index').hover(function(){
+                    $('#search').hover(function(){
     $(this).css({
       'color' : 'pink',
       'border-bottom' : '2px ridge orange'
@@ -180,10 +180,15 @@ $(function(){
 
 
 
-  $('#search').css({
+  $('#fun').css({
       'color' : 'pink',
       'border-bottom' : '2px ridge orange'
     });
+
+
+
+
+
 
 });
 

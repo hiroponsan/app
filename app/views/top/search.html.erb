@@ -59,7 +59,7 @@ strong{display: inline-table;}
 
 </style>
 <div class ="header">
-  <strong id ="">充実度ランキング</strong>　　<strong>楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong>授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong>ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong>新規登録</strong></a>　　<a href ="/users/sign_in"><strong>ログイン</strong>
+  <a href ="/pre_search_test"><strong id ="fun">過去問を投稿する</strong></a>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong>授業を検索</strong></a>　　<a href ="/pre_search_review"><strong>授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong>授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong>ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong>新規登録</strong></a>　　<a href ="/users/sign_in"><strong>ログイン</strong>
   <% end %>
     </div> 
 
@@ -75,7 +75,7 @@ strong{display: inline-table;}
 <h3 id ="left">"<%= params[:keyword] %>"の検索結果を表示しています。</h3>
 <% @products.each do |product| %>
   <ul>
-    <h3><a href= "/products/<%= product.id %>"><span><%= product.title %>  <%= product.professer %>先生</li></span>
+    <h3><a href= "/show/<%= product.id %>"><span><%= product.title %>  <%= product.professer %>先生</li></span>
   </ul>
   <% end %>
   </div>
@@ -87,7 +87,7 @@ strong{display: inline-table;}
 <% end %>
 
 <div class ="fix">
-<h4><div class ="green_box"><p><%= link_to '検索画面に戻る', pre_search_path, :style=>"color:white;" %></p></h4></div>
+<h4><div class ="green_box"><p><%= link_to '検索結果に戻る', pre_search_path, :style=>"color:white;" %></p></h4></div>
 <div class ="fix"><h4 id ="left"><div class ="green_box"><p><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></p></h4></div></h4>
 </h4>
 

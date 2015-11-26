@@ -22,6 +22,7 @@
 <body>
 
 <style>
+body {width: 100%;}
 body {margin: 0 auto;}
 body {text-align: center;}
 strong{color: white;}
@@ -103,7 +104,7 @@ textarea:focus {
 
 textarea {
   height:174px;
-  width: 310px;
+  width: 110px;
 }
 
 button {
@@ -642,13 +643,11 @@ div.uploader input {
   float: right;
 }
 
-.search__query1 {margin-left: -113px;}
-.search__query2 {margin-left: -110px;}
 
 
 #report {width: 145px;}
 
-#message {width: 290px;}
+
 
 #message {margin-left: 10px;}
 
@@ -842,7 +841,7 @@ return true
 
 <div class ="header">
 
-  <strong id ="fun">充実度ランキング</strong>　　<strong id ="easy">楽単度ランキング</strong>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href =""><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_up">ログイン</strong>
+  <strong id ="fun">過去問を投稿する</strong>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href =""><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_up">ログイン</strong>
   <% end %>
   </div>
 
@@ -868,8 +867,8 @@ return true
           
           <strong></strong>
         </label>
-         <select name ="year" style="width:px; margin-right:0px; font_size:50px;" >
-              <option value ="">年度を選択してください</option>
+         <select name ="year" style="width:px; margin-right:0px; font_size:50px;" required ="required" >
+              <option value ="" required ="required">年度を選択してください</option>
            <option value ="2001">2001年度</option>
            <option value ="2002">2002年度</option>
            <option value ="2003">2003年度</option>
@@ -896,8 +895,8 @@ return true
         </li>
         <li>
           <label for="fun">学期</label>
-           <select name ="semester" style="width:px; margin-right:20px; font_size:50px;" >
-           <option value ="">学期を選択してください</option>
+           <select name ="semester" style="width:px; margin-right:20px; font_size:50px;" required ="required">
+           <option value ="" >学期を選択してください</option>
            <option value ="前期中間">前期中間テスト</option>
            <option value ="前期期末テスト">前期期末テスト</option>
            <option value ="後期中間テスト">後期中間テスト</option>
@@ -905,24 +904,28 @@ return true
            </select>
         <li>
        <label for="report" id ="report">教科書の持ち込み</label>
-       <input type="radio"  name="textbook" value="可能" checked="">可能　
+       <input type="radio"  name="textbook" value="可" checked="">可能　
 　        <input type="radio" name="textbook" value="不可">不可
        
         <li>
         <input type="hidden" value="<%= @product.id %>" name="product_id">
         <form method="post" enctype="multipart/form-data">
-画像ファイル<input type="file" name="image" style="margin-left:100px;">
+画像ファイル<input type="file" name="image" style="margin-left:0px;" required ="required">
 <br>
 
         
 
           
     <p>
-        <button type="submit" class="action">送信する</button>
+        <button type="submit" class="action">投稿する</button>
         <button type="reset" class="right">書き直す</button>
+         <h5 class="notice" style="color:red;"><%= notice %></h5>
     </p>
 
-<h4 id ="aaa"><div class ="green_box"><%= link_to '検索画面へ', pre_search_path, :style=>"color:white; padding-left:55px; padding-top:15px;" %></h4></div>
+
+<h4 id ="aaa"><div class ="green_box"><%= link_to '前の画面へ', :back, :style=>"color:white; padding-left:55px; padding-top:15px;" %></h4></div>
+
+<h4 id ="aaa"><a href ="/products/<%= @product.id %>"><div class ="green_box"  style="color:white; padding-left:5px padding-top:15px;">授業の口コミを見る</h4></a></div>
 
  <h4 id ="aaaa"><div class ="green_box" id ="below"><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></h4></div>
 
