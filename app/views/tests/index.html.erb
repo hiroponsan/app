@@ -71,7 +71,7 @@ body {padding-bottom: 40px;}
 <% @tests.each do |test| %>
 
 <li><p><%= test.year %>年度　 <%= test.semester %> 　教科書持ち込み <%= test.textbook %> <strong id ="title" style ="color : blue;">　　　<a href ="#">問題を見る</strong></a> <strong id ="close" style ="display:none;">　　　<a href ="#">閉じる</strong><p></a></li>
-<div class ="image" style="display:none;"><%= image_tag test.image.url(:large) %></p></div>
+<div class ="image"><%= image_tag test.image.url(:large) %></p></div>
 
 
 
