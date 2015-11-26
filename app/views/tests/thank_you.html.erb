@@ -24,103 +24,87 @@
 <style>
 body {margin: 0 auto;}
 body {text-align: center;}
-body {padding-bottom: 40px;}
-.header strong{color: white;}
-.header strong{font-size: 18px;}
-.header strong{display: inline-table;}
-.header {padding-top: 30px;}
-.header {background-color: yellowgreen;}
-.header {height:50px;}
-
-
-
-#img {padding-top: 30px;}
-
-#img {padding-left: 20px;}
-
-
-.all {padding-right: 35px;}
-
-body {margin: 0 auto;}
-body {text-align: center;}
-body {padding-bottom: 30px;}
 strong{color: white;}
 strong{font-size: 18px;}
 strong{display: inline-table;}
 .header {padding-top: 30px;}
 .header {background-color: yellowgreen;}
 .header {height:50px;}
-.fix {padding-left: 35px;}
-.kaminari {font-size: 24px;}
 
-
-.all {padding-right: 35px;}
 
 .green_box {width: 200px;}
 .green_box {height:30px;}
 .green_box {background-color: green;}
-
+.green_box {color: white;}
 .green_box {font-size: 18px;}
 .green_box {margin: 0 auto;}
 
-#close {color: blue;}
 
 
-#img {color: orange;}
+
+
+.main1 {padding-top: 30px;}
+
+#red {font-size: 30px;}
+#red {color: red}
 
 
 
 </style>
 
 
-<div class ="header">
- <a href ="/pre_search_test"><strong id ="fun">過去問を投稿する</strong></a>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_in">ログイン</strong>
-  <% end %>
-    </div> 
+<script type="text/javascript">
 
-
-
-<% if @tests.blank? %>
-<h3>まだこの授業の過去問はありません</h3>
-<a href ="/test/<%= @product.id %>"><h3>最初の過去問を投稿する</h3></a>
-
-<% end %>
-<% else %>
-
-<h1>過去問一覧</h1>
-<% @tests.each do |test| %>
-
-
-<p id="notice"><%= notice %></p>
-
-<li><p><%= test.year %>年度　 <%= test.semester %> 　教科書持ち込み <%= test.textbook %> <a href ="#"><strong id ="title" style ="color : blue;">　　　問題を見る</strong></a> <a href ="#"><strong id ="close" style ="display:none;">　　　閉じる</strong><p></a></li>
-<div class ="image" style="display:none;"><%= image_tag test.image.url(:large) %></p></div>
-
-<% end %>
-
-
-<h4 id ="aaa"><a href ="/products/<%= @product.id %>"><div class ="green_box"  style="color:white; padding-left:5px padding-top:15px;">授業の口コミを見る</h4></a></div>
-
-<h4 id ="aaa"><div class ="green_box"><%= link_to '検索画面へ', pre_search_path, :style=>"color:white;" %></h4></div>
-
- <h4 id ="aaaa"><div class ="green_box" id ="below"><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></h4></div>
-
-
-    </div>
-    <footer>
-    </footer>
-    </div>
-    </body>
+function validate(f)
+{
+  if(f.easy.value == "") 
+  {
+    alert("楽単度を入力してください");
+    return false;
+  }
+  else if(f.fun.value =="");
+  {
+    alert("面白さを入力してください");
+    return false;
+  }
+  else if(f.report.value =="");
+  {
+    alert("レポートの有無を入力してください");
+    return false;
+  }
+  else if(f.attendence.value == "")
+  {
+    alert("出席の有無を入力してください");
+    return false;
+  }
+  else if(f.test.value =="")
+  {
+    alert("テストの有無を入力してください");
+    return false;
+  }
+  else if(f.review.value =="")
   
+    alert("コメントを何かお書きください")
+    return false;
+  }
+  return true;
+}
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script>
 
 $(function(){
 
+  $('#review').hover(function(){
+    $(this).css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+    }, function(){
+    $(this).css({
+      'color': 'white',
+      'border-bottom' : 'none'
+    });
+  });
 
 
     $('#fun').hover(function(){
@@ -150,7 +134,7 @@ $(function(){
   });
 
 
-    $('#write').hover(function(){
+    $('#index').hover(function(){
     $(this).css({
       'color' : 'pink',
       'border-bottom' : '2px ridge orange'
@@ -228,17 +212,15 @@ $(function(){
     });
   });
 
-$("#title").click(function(){
-  $(".image").slideDown();
-    $("#close").show();
-    $("#title").hide();
-});
 
-$("#close").click(function(){
-  $(".image").slideUp();
-    $("#close").hide();
-    $("#title").show();
-});
+                    $('#write').css({
+      'color' : 'pink',
+      'border-bottom' : '2px ridge orange'
+    });
+
+
+
+  });
 
 
 
@@ -247,11 +229,27 @@ $("#close").click(function(){
 
 
 
-});
+
+
 
 </script>
-</html>
+
+
+<div class ="header">
+
+  <a href ="/pre_search_test"><strong id ="fun">過去問を投稿する</strong></a>　　<a href ="/tests/index"><strong id ="easy">過去問一覧</strong></a>　　<a href ="/"><strong id ="index">注目授業ランキング</strong></a>　　<a href ="/pre_search"><strong id ="search">授業を検索</strong></a>　　<a href ="/pre_search_review"><strong id ="review">授業評価を見る</strong></a>　　<a href ="/pre_search_entry"><strong id ="write">授業評価を書く</strong></a>　<% if user_signed_in? %> <a href ="/users/sign_out"><strong id ="logout">ログアウト</strong></a> <% else %> <a href ="/users/sign_up"><strong id ="sign_up">新規登録</strong></a>　　<a href ="/users/sign_in"><strong id ="sign_up">ログイン</strong>
+  <% end %>
+  </div>
+
+<img src ="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWJlc4q_64Wuqi7kcTgA4FZB0pVTnxvclAav0Ru0IIXY-tTMQkXArrFJOVZQ" width="300px">
 
 
 
 
+<h4 id ="aaa"><div class ="green_box"><p><%= link_to '授業を検索する', pre_search_path, :style=>"color:white;" %></p></h4></div>
+
+ <h4 id ="aaa"><div class ="green_box"><p><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></p></h4></div>
+
+
+  <footer>
+  </footer>

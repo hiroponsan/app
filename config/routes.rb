@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :products
   resources :reviews
   resources :products
+
   root 'top#index'
   get '/products/:id' => 'products#show'
   get '/link/:id' => 'top#link'
@@ -35,7 +36,9 @@ Rails.application.routes.draw do
   get '/show/:id' => 'top#show'
   get '/test/:id/image' => 'tests#show_image'
   get '/tests/index' => 'tests#index'
+  get '/thank_you' => 'tests#thank_you'
 
+   resources :tests
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
