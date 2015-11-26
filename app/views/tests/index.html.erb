@@ -23,7 +23,6 @@
 
 <style>
 body {margin: 0 auto;}
-body {margin: 0 auto;}
 body {text-align: center;}
 body {padding-bottom: 40px;}
 .header strong{color: white;}
@@ -34,7 +33,7 @@ body {padding-bottom: 40px;}
 .header {height:50px;}
 
 #easy {color : pink;}
-#easy {border-bottom: 2px ridge orange;}
+#easy {border-bottom: 2px ridge orange;}        
 
 
 #img {padding-top: 30px;}
@@ -44,10 +43,6 @@ body {padding-bottom: 40px;}
 
 .all {padding-right: 35px;}
 
-
-
-.main {margin: 0 auto;}
-.main {text-align: center;}
 
 .green_box {width: 200px;}
 .green_box {height:30px;}
@@ -69,15 +64,16 @@ body {padding-bottom: 40px;}
   <% end %>
     </div> 
 
-<div class ="main">
+
 
 <h1>過去問一覧</h1>
 
 <% @tests.each do |test| %>
 
 
-<li><p><%= test.year %>年度　<%= test.semester %>　教科書持ち込み <%= test.textbook %> <strong id ="title" style ="color : blue;">　　<a href ="#">問題を見る</strong></a> <strong id ="close" style ="display:none;">　　　<a href ="#">閉じる</strong><p></a></li>
+<li><p><%= test.year %>年度　 <%= test.semester %> 　教科書持ち込み <%= test.textbook %> <strong id ="title" style ="color : blue;">　　　<a href ="#">問題を見る</strong></a> <strong id ="close" style ="display:none;">　　　<a href ="#">閉じる</strong><p></a></li>
 <div class ="image" style="display:none"><%= image_tag test.image.url(:large) %></p></div>
+
 
 
 <% end %>
@@ -87,7 +83,6 @@ body {padding-bottom: 40px;}
 
  <h4 id ="aaaa"><div class ="green_box" id ="below"><%= link_to 'ランキングへ', root_path, :style=>"color:white;" %></h4></div>
 
-</div>
 
     </div>
     <footer>
@@ -236,6 +231,9 @@ $("#close").click(function(){
     $("#close").hide();
     $("#title").show();
 });
+
+
+
 
 
 
