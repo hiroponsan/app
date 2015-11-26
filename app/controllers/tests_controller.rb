@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
-
+  before_action :authenticate_user!
   # GET /tests
   # GET /tests.json
   def index
