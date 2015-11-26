@@ -4,7 +4,6 @@ class TestsController < ApplicationController
   # GET /tests.json
   def index
     @tests = Test.all
-    @product = Product.all
   end
 
   # GET /tests/1

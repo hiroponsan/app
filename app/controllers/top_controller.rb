@@ -66,9 +66,6 @@ end
 
 
 
-
-
-
   def post
    @review = current_user.reviews.create(create_params)
    if @review.save
