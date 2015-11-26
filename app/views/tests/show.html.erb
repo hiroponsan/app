@@ -85,10 +85,12 @@ strong{display: inline-table;}
 <a href ="/test/<%= @product.id %>"><h3>最初の過去問を投稿する</h3></a>
 
 <% end %>
+
 <% else %>
 
-<h1>過去問一覧</h1>
+
 <% @tests.each do |test| %>
+
 
 
 <p id="notice"><%= notice %></p>
