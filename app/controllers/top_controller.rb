@@ -1,5 +1,5 @@
 class TopController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :show]
 
    def index
     product_ids = Review.group(:product_id).order('count_product_id DESC').limit(20).count(:product_id).keys
