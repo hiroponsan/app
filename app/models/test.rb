@@ -8,6 +8,4 @@ class Test < ActiveRecord::Base
    validates :year, :semester, :textbook, :image, presence: true
 
 
-
-
 end
