@@ -61,10 +61,7 @@ class TopController < ApplicationController
 
 
 def thank_you 
-
 end
-
-
 
   def post
    @review = current_user.reviews.create(create_params)

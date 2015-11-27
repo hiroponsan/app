@@ -68,7 +68,7 @@ strong{display: inline-table;}
 <h3 id ="left">"<%= params[:keyword] %>"の検索結果を表示しています。</h3>
 <% @products.each do |product| %>
   <ul>
-    <h3><a href= "/show/<%= product.id %>"><span><%= product.title %> <%= product.professer %>先生</li></span>
+    <h3><a href= "/entry/<%= product.id %>"><span><%= product.title %> <%= product.professer %>先生</li></span>
   </ul>
   <% end %>
   </div>
