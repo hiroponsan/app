@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :products
 
-  root 'top#index'
+  root 'top#pre_search'
   get '/products/:id' => 'products#show'
   get '/link/:id' => 'top#link'
 
